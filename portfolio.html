@@ -8,16 +8,52 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
+    body{
+          background-image: url("images/lake-isabell.jpg");
+          background-size: cover;
+          font-size: 16px;
+      }
+      .jumbotron{
+        background:rgba(10, 10, 10, 0.5);
+        color: #f1f1f1;
+        position: relative;
+        top: 40px;
+      }
+      .jumbotron h1{
+        font-size: 50px;
+      }
+      .jumbotron p{
+        font-size: 16px;
+      }
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
+      background:rgba(10, 10, 10, 0.5);
+        color: #f1f1f1;
     }
     
-    /* Add a gray background color and some padding to the footer */
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+
+    
+    /* Set black background color, white text and some padding */
     footer {
-      background-color: #f2f2f2;
-      padding: 25px;
+      background:rgba(10, 10, 10, 0.5);
+      color: #f1f1f1;
+      padding: 15px;
+      position: relative;
+      top: 135px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
     }
   </style>
 </head>
@@ -35,13 +71,9 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="index.html">Who I am</a></li>
+        <li class="active"><a href="#">What I've Done</a></li>
+        <li><a href="#">Talk to Me</a></li>
       </ul>
     </div>
   </div>
