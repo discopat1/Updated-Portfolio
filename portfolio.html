@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
@@ -25,6 +26,14 @@
       .jumbotron p{
         font-size: 16px;
       }
+      p, h3{
+        color: #f1f1f1;
+      }
+
+      .work img{
+        width: 100%;
+        height: 12em;
+      }
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
       margin-bottom: 0;
@@ -44,7 +53,12 @@
       color: #f1f1f1;
       padding: 15px;
       position: relative;
-      top: 135px;
+      top: 260px;
+    }
+    i {
+      margin-right: 30px;
+      margin-left: 30px;
+      color: #f1f1f1;
     }
     
     /* On small screens, set height to 'auto' for sidenav and grid */
@@ -67,13 +81,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Portfolio</a>
+      <a class="navbar-brand" href="index.html">Patrick Neff</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li><a href="index.html">Who I am</a></li>
-        <li class="active"><a href="#">What I've Done</a></li>
-        <li><a href="#">Talk to Me</a></li>
+        <li class="active"><a href="portfolio.html">What I've Done</a></li>
+        <li><a href="contact.html">Talk to Me</a></li>
       </ul>
     </div>
   </div>
@@ -82,33 +96,36 @@
 <div class="jumbotron">
   <div class="container text-center">
     <h1>My Portfolio</h1>      
-    <p>Some text that represents "Me"...</p>
   </div>
 </div>
   
 <div class="container-fluid bg-3 text-center">    
-  <h3>Some of my Work</h3><br>
+  <h3>A snapshot of some of my past and current projects</h3><br>
   <div class="row">
-    <div class="col-sm-3">
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    <div class="col-sm-3 work">
+      <a href="http://workout-app-.herokuapp.com/"><p>The Workout App</p>
+      <img src="images/barbell.jpg" class="img-responsive" style="width:100%" alt="Image"></a>
+      <a href="https://github.com/discopat1/workoutApp-patfork"><p>Just the code</p></a>
     </div>
-    <div class="col-sm-3"> 
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    <div class="col-sm-3 work"> 
+      <a href="https://smitty10010.github.io/team-5-project1/"><p>Crag</p>
+      <img src="images/rock-climber.jpeg" class="img-responsive" style="width:100%" alt="Image"></a>
+      <a href="https://github.com/smitty10010/team-5-project1"><p>Just the code</p></a>
     </div>
-    <div class="col-sm-3"> 
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    <div class="col-sm-3 work"> 
+      <a href= "https://blooming-island-62700.herokuapp.com/"><p>GOT Friend Finder</p>
+      <img src="images/GOTimage.jpeg" class="img-responsive" style="width:100%" alt="Image"></a>
+      <a href="https://github.com/discopat1/Friend-finder-express"><p>Just the code</p></a>
     </div>
-    <div class="col-sm-3">
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    <div class="col-sm-3 work">
+      <a href="https://evening-retreat-33833.herokuapp.com/"><p>Burgers!</p>
+      <img src="images/cartoon-burger.jpg" class="img-responsive" style="width:100%" alt="Image"></a>
+      <a href="https://github.com/discopat1/burger"><p>Just the code</p></a>
     </div>
   </div>
 </div><br>
 
-<div class="container-fluid bg-3 text-center">    
+<!-- <div class="container-fluid bg-3 text-center">    
   <div class="row">
     <div class="col-sm-3">
       <p>Some text..</p>
@@ -127,10 +144,10 @@
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
     </div>
   </div>
-</div><br><br>
+</div><br><br> -->
 
 <footer class="container-fluid text-center">
-  <p>Footer Text</p>
+  <p><a href="https://github.com/discopat1"><i class="fab fa-github fa-3x"></i></a><a href="https://www.linkedin.com/in/patrick-neff-66034a15a"><i class="fab fa-linkedin fa-3x"></i></a></p>
 </footer>
 
 </body>
