@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+  
   <style>
     body{
           background-image: url("images/lake-isabell.jpg");
@@ -87,22 +89,23 @@
     <div class="col-sm-8 text-left" id="text">
         <h1>Contact</h1>
         <hr>
-        <form>
-            <div class="form-group">
+        <form id= "contact-form">
+            <div class="form-group" >
             <label for="exampleFormControlTextarea1">Name</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+            <textarea class="form-control" id="name-input" rows="1"></textarea>
             </div>
             
             <div class="form-group">
                 <label for="exampleFormControlInput1">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <input type="email" class="form-control" id="email-input" placeholder="name@example.com">
             </div>
             
             
             <div class="form-group">
             <label for="exampleFormControlTextarea1">Message</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+            <textarea class="form-control" id="message-input" rows="10"></textarea>
             </div>
+            <button class="btn btn-default" id="add-message" type="submit">Submit</button>
         </form>
     </div>
   </div>
@@ -112,5 +115,43 @@
   <p><a href="https://github.com/discopat1"><i class="fab fa-github fa-3x"></i></a><a href="https://www.linkedin.com/in/patrick-neff-66034a15a"><i class="fab fa-linkedin fa-3x"></i></a></p>
 </footer>
 
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD-Ox774tCP6pZO7k7Qj8toDm66Fd4KMDc",
+    authDomain: "portfolio-contact-b365c.firebaseapp.com",
+    databaseURL: "https://portfolio-contact-b365c.firebaseio.com",
+    projectId: "portfolio-contact-b365c",
+    storageBucket: "",
+    messagingSenderId: "375113431543"
+  };
+  firebase.initializeApp(config);
+
+  var database = firebase.database();
+
+  var name = "";
+  var email = "";
+  var message = "";
+
+  $("#add-message").on("click", function(event) {
+      // Don't refresh the page!
+      event.preventDefault();
+
+      name = $("#name-input").val().trim();
+      email = $("#email-input").val().trim();
+      message = $("#message-input").val().trim();
+
+      database.ref().set({
+        name: name,
+        email: email,
+        message: message
+      });
+      $("#contact-form").trigger("reset");
+      window.location.href="index.html";
+    });
+
+  
+
+</script>
 </body>
 </html>
