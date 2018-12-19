@@ -24,20 +24,23 @@
       background:rgba(10, 10, 10, 0.85);
         color: #f1f1f1;
     }
-    
+    #text{
+        background:rgba(10, 10, 10, 0.85);
+        color: #f1f1f1;
+        position: relative;
+        top: 40px;
+      }
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 450px}
     
-    /* google form */
-    #google-form {
-      text-align: center;
-    }
     
     /* Set black background color, white text and some padding */
     footer {
       background:rgba(10, 10, 10, 0.85);
       color: #f1f1f1;
       padding: 15px;
+      position: relative;
+      top: 216px;
     }
     i {
       margin-right: 30px;
@@ -77,14 +80,75 @@
     </div>
   </div>
 </nav>
-<div id= "google-form">
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf4qkUaF99th6TO5603RGYqwrZ7Jr9bQ2ABWI10V4bSAc4nWg/viewform?embedded=true" width="640" height="861" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-8 text-left" id="text">
+        <h1>Contact</h1>
+        <hr>
+        <form id= "contact-form">
+            <div class="form-group" >
+            <label for="exampleFormControlTextarea1">Name</label>
+            <br>
+            <input type="text" name="name" placeholder="name" class="form-control" id="name-input">
+            <!-- <textarea class="form-control" id="name-input" rows="1"></textarea> -->
+            </div>
+            
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Email address</label>
+                <br>
+                <input type="email" name="_replyto" class="form-control" id="email-input" placeholder="name@example.com">
+                <!-- <input type="email" class="form-control" id="email-input" placeholder="name@example.com"> -->
+            </div>
+            
+            
+            <div class="form-group">
+            <label for="exampleFormControlTextarea1">Message</label>
+            <textarea class="form-control" id="message-input" rows="10"></textarea>
+            </div>
+            <button class="btn btn-default" id="add-message" type="submit" value="Send">Submit</button>
+        </form>
+    </div>
+  </div>
 </div>
+
 
 
 <footer class="container-fluid text-center" id= "footer-opaque">
   <p><a href="https://github.com/discopat1"><i class="fab fa-github fa-3x"></i></a><a href="https://www.linkedin.com/in/patrick-neff-66034a15a"><i class="fab fa-linkedin fa-3x"></i></a></p>
 </footer>
 
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD-Ox774tCP6pZO7k7Qj8toDm66Fd4KMDc",
+    authDomain: "portfolio-contact-b365c.firebaseapp.com",
+    databaseURL: "https://portfolio-contact-b365c.firebaseio.com",
+    projectId: "portfolio-contact-b365c",
+    storageBucket: "",
+    messagingSenderId: "375113431543"
+  };
+  firebase.initializeApp(config);
+  var database = firebase.database();
+  var name = "";
+  var email = "";
+  var message = "";
+  $("#add-message").on("click", function(event) {
+      // Don't refresh the page!
+      event.preventDefault();
+      name = $("#name-input").val().trim();
+      email = $("#email-input").val().trim();
+      message = $("#message-input").val().trim();
+      database.ref().set({
+        name: name,
+        email: email,
+        message: message
+      });
+      $("#contact-form").trigger("reset");
+      // change this to modal saying that info was submitted
+      window.location.href="index.html";
+    });
+  
+</script>
 </body>
 </html>
