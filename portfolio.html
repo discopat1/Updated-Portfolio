@@ -9,10 +9,41 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-    body{
+      body{
           background-image: url("images/lake-isabell.jpg");
           background-size: cover;
           font-size: 16px;
+      }
+      .overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 44%;
+          width: 100%;
+          opacity: 0;
+          transition: .5s ease;
+      }
+      .work:hover .overlay {
+          opacity: 1;
+      }
+      .second {
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+      }
+      .text {
+        color: white;
+        font-size: 13px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
       }
       .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
         background-color: rgb(0, 0, 0);
@@ -47,6 +78,8 @@
         border-width: 3px;
         border-color: rgb(70, 68, 68);
       }
+
+      
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
       margin-bottom: 0;
@@ -73,6 +106,8 @@
       margin-left: 30px;
       color: #f1f1f1;
     }
+
+    
     
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
@@ -117,19 +152,31 @@
   <div class="row">
     <div class="col-sm-3 work">
       <a href="https://workoutappsrevenge.herokuapp.com/"><p>The Workout App</p>
-      <img src="images/Workoutapp-screenshot.png" class="img-responsive" style="width:100%" alt="Image"></a>
+        <img src="images/Workoutapp-screenshot.png" class="img-responsive" style="width:100%" alt="Image">
+        <div class="overlay">
+          <img src="images/workout-description.png" class="img-responsive second" style="width:100%" alt="Image">
+        </div>
+      </a>
       <br>
       <a href="https://github.com/smitty10010/workoutappsrevenge"><p>Just the code</p></a>
     </div>
     <div class="col-sm-3 work"> 
       <a href="https://smitty10010.github.io/team-5-project1/"><p>Crag</p>
-      <img src="images/crag2.png" class="img-responsive" style="width:100%" alt="Image"></a>
+      <img src="images/crag2.png" class="img-responsive" style="width:100%" alt="Image">
+        <div class="overlay">
+          <img src="images/crag-description.png" class="img-responsive second" style="width:100%" alt="Image">
+        </div>
+      </a>
       <br>
       <a href="https://github.com/smitty10010/team-5-project1"><p>Just the code</p></a>
     </div>
     <div class="col-sm-3 work">
       <a href="https://pad-holder.herokuapp.com/Work"><p>Virtual Pad Holder</p>
-      <img src="images/pad-holder.png" class="img-responsive" style="width:100%" alt="Image"></a>
+      <img src="images/pad-holder.png" class="img-responsive" style="width:100%" alt="Image">
+        <div class="overlay">
+          <img src="images/pad-description.png" class="img-responsive second" style="width:100%" alt="Image">
+        </div>
+      </a>
       <br>
       <a href="https://github.com/discopat1/Pad-holder-app"><p>Just the code</p></a>
     </div>
