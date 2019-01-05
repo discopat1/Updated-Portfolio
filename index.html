@@ -53,10 +53,30 @@
       margin-left: 30px;
       color: #f1f1f1;
     }
-    
-    #hobbies {
+    #sql-2 {
+      width: 34%;
+      margin-left: 15px;
+    }
+    #mongo-2 {
+      width: 60%;
       position: relative;
-      left: 60px;
+      top: 12px;
+    }
+    #handlebars {
+      width: 45%;
+      position: relative;
+      bottom: 23px;
+    }
+    #lodash {
+      width: 23%;
+    }
+    .icon {
+      -webkit-transition: transform 1s; /* Safari */
+      transition: transform 1s;
+    }
+    .icon:hover {
+      -webkit-transform: rotate(360deg); /* Safari */
+      transform: rotate(360deg);
     }
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
@@ -98,12 +118,13 @@
       <img src="images/Head-shot-long-hair.jpg" class="rounded float-right" alt="image">
       <p>I am a high performing, goal oriented, individual with leadership skills and a willingness to learn new things. I excel at working with others in collaborative efforts and finding solutions to difficult problems using a variety of methods. Some of my greatest attributes are my discipline, strategic planning, pattern recognition, and forecasting.</p> 
       <hr>
-      <p>My goal with every new technology I learn is to bring my passion for coding to find a way to fill some void or solve some problem in our society. I think that the potential to help others with what I’m learning is one of my strongest motivators. I have a long track record of learning new things and taking up difficult disciplines as hobbies. I enjoy playing music- my main instrument is the violin but will try anything I can get my hands on.  Also, I have dedicated myself to martial arts and feel that this has supported my ability to handle difficult tasks and face every challenge with tenacity.</p>
+      <p>My goal with every new technology I learn is to bring my passion for coding to find a way to fill some void or solve some problem in our society. I think that the potential to help others with what I’m learning is one of my strongest motivators. I have a long track record of learning new things and taking up difficult disciplines as hobbies. I enjoy playing music- my main instrument is the violin but will try anything I can get my hands on. I have also dedicated myself to martial arts and feel that this has supported my ability to handle difficult tasks and face every challenge with tenacity.</p>
       <hr>
       <div class="container-fluid">
         <div class="row">
           <h4>Tech Skills</h4>
-          <div class="col-sm-4">
+          <br>
+          <!-- <div class="col-sm-4">
           <ul>
             <li>MERN</li>
             <li>HTML5</li>
@@ -126,8 +147,20 @@
             <li>Handlebars JS</li>
             <li>Lodash</li>
           </ul>
-          </div>
+          </div> -->
         </div>
+          <div class="row">
+            <div class="col-sm-3"><i class="fab fa-node-js fa-3x img-responsive icon"></i></div>
+            <div class="col-sm-3"><i class="fab fa-react fa-3x img-responsive icon"></i></div>
+            <div class="col-sm-3"><img id="sql-2" class="img-responsive icon" src="images/mysql-logo.png" alt=""></div>
+            <div class="col-sm-3"><img id="mongo-2" class="img-responsive icon" src="images/mongodb-icon.jpg" alt=""></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3"><i class="fab fa-html5 fa-3x img-responsive icon"></i></div>
+            <div class="col-sm-3"><i class="fab fa-css3-alt fa-3x img-responsive icon"></i></i></div>
+            <div class="col-sm-3"><img id="handlebars" class="img-responsive icon" src="images/handlebars-icon.png" alt=""></div>
+            <div class="col-sm-3"><img id="lodash" class="img-responsive icon" src="images/lodash-icon.png" alt=""></div>
+          </div>
       </div>
     </div>
     
